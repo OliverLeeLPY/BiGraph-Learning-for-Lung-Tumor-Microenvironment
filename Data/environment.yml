@@ -1,0 +1,24 @@
+# Conda env for BiGraph4TME.
+# New machine:  conda env create -f environment.yml && conda activate bigraph4tme
+# Update env:   conda env update -f environment.yml --prune
+# Exact clone:  conda env export --no-builds > environment-frozen.yml  (on a working PC)
+# pandas 1.5.x: statannotations 0.6.0 requires pandas<2.0
+name: bigraph4tme
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=1.23.5
+  - scipy=1.8.0
+  - matplotlib=3.10.8
+  - pandas=1.5.3
+  - networkx=3.0
+  - scikit-learn=1.2.1
+  - seaborn=0.11.2
+  - openpyxl
+  - ipykernel
+  - pip
+  - pip:
+    - lifelines==0.27.8
+    - PhenoGraph==1.5.7
+    - statannotations==0.6.0
